@@ -4,7 +4,7 @@
 \alias{rtadfSimPar}
 \title{Simulate critical values and date-stamping threshold sequence in parallel}
 \usage{
-rtadfSimPar(t, r0 = 10, nrep = 1000, test = c("adf", "sadf", "gsadf"))
+rtadfSimPar(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf"))
 }
 \arguments{
 \item{t}{Number of observations (i.e., length of the sample)}
