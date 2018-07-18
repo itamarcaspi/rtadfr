@@ -24,7 +24,7 @@ rtadfSimPar <- function(t, r0 = 10, nrep = 1000, test = c("adf", "sadf", "gsadf"
   start.time <- Sys.time()
 
   MCresults <- foreach(i = 1:nrep, .inorder = FALSE,
-                       .packages = c("urca", "RcppEigen"),
+                       .packages = c("RcppEigen"),
                        .combine = cbind) %dorng% {
                          teststat(t, r0, test)
                        }
