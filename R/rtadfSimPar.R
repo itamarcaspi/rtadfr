@@ -14,7 +14,7 @@
 #'
 #' @examples
 #' cv <- rtadfSimPar(100, 10, 1000, test = "sadf")
-rtadfSimPar <- function(t, r0 = 10, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
+rtadfSimPar <- function(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
 
   # The parallel Monte Carlo simulation loop----------------------------------
 

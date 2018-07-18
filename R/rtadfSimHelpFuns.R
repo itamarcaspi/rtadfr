@@ -84,3 +84,5 @@ teststat <- function(t, r0, testType){
   return(results)
 
 }
+
+
