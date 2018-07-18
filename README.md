@@ -10,7 +10,7 @@ You can install the **development** version from
 
 ```s
 # install.packages("devtools")
-devtools::install_github("icaspi99/rtadf")
+devtools::install_github("icaspi99/rtadfr")
 ```
 
 ## Usage
