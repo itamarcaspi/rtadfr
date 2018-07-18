@@ -4,5 +4,4 @@
 #'
 #' @format A data frame with 1680 monthly observations (January 1871 - December
 #'   2010)
-#' @source \url{}
 "snp"
