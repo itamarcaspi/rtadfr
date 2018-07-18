@@ -26,14 +26,17 @@ rtadf <- function(y, r0, test = c("adf", "sadf", "gsadf"),
 
   if (test == "adf") {
     testStat <- ur.adf(y, type, lags, selectlags)
+    list("testStat" = testStat)
   } else if (test == "sadf") {
     testStat <- ur.sadf(y, r0, type, lags, selectlags)$stat
     testSeq  <- c(rep(NA, r0 - 1),
                   ur.sadf(y, r0, type, lags, selectlags)$sequence)
+    list("testStat" = testStat, "testSeq" = testSeq)
   } else if (test == "gsadf") {
     testStat <- ur.gsadf(y, r0, type, lags, selectlags)$stat
     testSeq  <- c(rep(NA, r0 - 1),
                   ur.gsadf(y, r0, type, lags, selectlags)$sequence)
+    list("testStat" = testStat, "testSeq" = testSeq)
   }
 
 
