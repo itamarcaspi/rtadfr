@@ -1,7 +1,7 @@
 rtadfr <img src="man/figures/logo.png" align="right" width="20%" height="20%"/>
 ======================
 
-The R package *rtadf* provides methods and tools for testing for bubbles in univariate time series.
+The R package *rtadf* (Right Tailed Unit Root Tests with R) provides methods and tools for testing for bubbles in univariate time series.
 
 ## Installation
 
