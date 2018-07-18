@@ -29,8 +29,10 @@ rtadf(snp[,1], r0, test = "sadf", nrep = 500, parallel = TRUE)
 
 ## For more information on the methods used in the package see
 
+  * Caspi, I. (2017). Rtadf: Testing for Bubbles with EViews. *Journal of Statistical Software*, 81(c01).
   * Phillips, P. C. B., Wu, Y., & Yu, J. (2011). Explosive Behavior in the 1990s Nasdaq: When Did Exuberance Escalate Asset Values? *International Economic Review*, 201(1), 201--226.
   * Phillips, P. C. B., Shi, S., & Yu, J. (2015). Testing for multiple bubbles: Historical episodes of exuberance and collapse in the S&P 500. *International Economic Review*, 56(4), 1034–1078.
+  
   
 
 ## License
