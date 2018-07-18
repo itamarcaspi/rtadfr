@@ -25,6 +25,8 @@ T <- nrow(snp)  # Sample size
 r0 <- round(T*(0.01+1.8/sqrt(T)))  # Minimal window size
 rtadf(snp[,1], r0, test = "sadf", nrep = 500, parallel = TRUE) 
 
+```
+
 ## For more information on the methods used in the package see
 
   * Phillips, P. C. B., Wu, Y., & Yu, J. (2011). Explosive Behavior in the 1990s Nasdaq: When Did Exuberance Escalate Asset Values? *International Economic Review*, 201(1), 201--226.
