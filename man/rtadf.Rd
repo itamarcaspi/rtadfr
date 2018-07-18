@@ -5,8 +5,7 @@
 \title{rtadf}
 \usage{
 rtadf(y, r0, test = c("adf", "sadf", "gsadf"), type = c("none", "drift",
-  "trend"), lags = 1, selectlags = c("Fixed", "AIC", "BIC"), nrep = 1000,
-  parallel = TRUE)
+  "trend"), lags = 1, selectlags = c("Fixed", "AIC", "BIC"))
 }
 \arguments{
 \item{y}{Vector to be tested for an explosive root.}
@@ -23,18 +22,12 @@ rtadf(y, r0, test = c("adf", "sadf", "gsadf"), type = c("none", "drift",
 or the Bayes "BIC" information criteria. The maximum number of lags
 considered is set by lags. The default is to use a "fixed" lag length set
 by lags.}
-
-\item{nrep}{Number of replications.}
-
-\item{parallel}{a logical value indicating whether to use parallel
-computation.}
 }
 \value{
-List with test statistic, date-stamping sequence, critical values
-  and date-stamping threshold sequence
+List with test statistic, date-stamping sequence
 }
 \description{
-Performs recursive and non-recursive right-tailed unit root tests.
+Calculates recursive and non-recursive right-tailed unit root tests statistics.
 }
 \examples{
 y  <- rnorm(100)

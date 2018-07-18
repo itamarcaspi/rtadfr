@@ -4,7 +4,15 @@ Title: What the Package Does (Title Case)
 Version: 0.1.0
 Author: Itamar Caspi
 Maintainer: The package maintainer <caspi.itamar@gmail.com>
-Description: 
+Description: rtadfr (right-tail augmented Dickey-Fuller with R), an R package that facilitates
+              the performance of time series based tests that help detect and date-stamp asset price bubbles.
+              The detection strategy is based on a right-tail variation of the standard augmented Dickey-Fuller (ADF) test
+              where the alternative hypothesis is of a mildly explosive process. Rejection of the null in each of these
+              tests may serve as empirical evidence for an asset price bubble. The package implements three types
+              of tests: standard ADF, supremum ADF (SADF; Phillips, Wu, and Yu 2011) 
+              and generalized SADF (GSADF; Phillips, Shi, and Yu 2015). It calculates the test statistics
+              for each of the above four tests, simulates the corresponding exact finite sample critical values
+              and p values via Monte Carlo methods, under the assumption of Gaussian innovations.
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true

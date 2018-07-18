@@ -1,7 +1,7 @@
 rtadfr <img src="man/figures/logo.png" align="right" width="20%" height="20%"/>
 ======================
 
-The R package *rtadf* (Right Tailed Unit Root Tests with R) provides methods and tools for testing for bubbles in univariate time series.
+The R package *rtadf* (Right Tailed ADF Tests with R) provides methods and tools for testing for bubbles in univariate time series.
 
 ## Installation
 
@@ -21,9 +21,15 @@ library(rtadf)
 # SADF test
 
 data(snp)
-T <- nrow(snp)  # Sample size
-r0 <- round(T*(0.01+1.8/sqrt(T)))  # Minimal window size
-rtadf(snp[,1], r0, test = "sadf", nrep = 500, parallel = TRUE) 
+T <-nrow(snp)
+r0 <- round(T*(0.01+1.8/sqrt(T)))
+testStat <- rtadf(snp[,1], r0, test = "sadf")
+cvs <- rtadfSim(T, nrep = 100, r0, test = "sadf")
+
+df <- ts(cbind(testStat$testSeq, cvs$datestampCVs[,2]),
+         start = c(1870,1), frequency = 12)
+
+ts.plot(df[,2:3], plot.type = "single", col=c("blue", "red"))
 
 ```
 

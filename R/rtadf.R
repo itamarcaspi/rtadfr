@@ -1,6 +1,6 @@
 #' rtadf
 #'
-#' Performs recursive and non-recursive right-tailed unit root tests.
+#' Calculates recursive and non-recursive right-tailed unit root tests statistics.
 #'
 #' @param y     Vector to be tested for an explosive root.
 #' @param r0    Minimal Window size.
@@ -11,12 +11,8 @@
 #'   or the Bayes "BIC" information criteria. The maximum number of lags
 #'   considered is set by lags. The default is to use a "fixed" lag length set
 #'   by lags.
-#' @param nrep  Number of replications.
-#' @param parallel a logical value indicating whether to use parallel
-#'   computation.
 #'
-#' @return  List with test statistic, date-stamping sequence, critical values
-#'   and date-stamping threshold sequence
+#' @return  List with test statistic, date-stamping sequence
 #' @export
 #'
 #' @examples
@@ -25,8 +21,8 @@
 #' rtadf(y, r0, test ="sadf")
 rtadf <- function(y, r0, test = c("adf", "sadf", "gsadf"),
                   type = c("none", "drift", "trend"),
-                  lags = 1, selectlags = c("Fixed", "AIC", "BIC"),
-                  nrep = 1000, parallel = TRUE) {
+                  lags = 1, selectlags = c("Fixed", "AIC", "BIC")) {
+
 
   if (test == "adf") {
     testStat <- ur.adf(y, type, lags, selectlags)
@@ -40,17 +36,5 @@ rtadf <- function(y, r0, test = c("adf", "sadf", "gsadf"),
                   ur.gsadf(y, r0, type, lags, selectlags)$sequence)
   }
 
-
-  t <- length(y)
-  cvs <- ifelse(parallel = TRUE, rtadfSimPar(t, r0, nrep, test),
-                rtadfSim(t, r0, nrep, test))
-
-  if (test == "adf") {
-    list(testStat = testStat, criticalValues = cvs)
-  } else {
-    list(testStat = testStat, testSeq = testSeq,
-         criticalValues = cvs$testCVs,
-         dateStampSeq =  c(rep(NA, r0 - 1),cvs$datestampCVs[,"95%"]))
-  }
 
 }

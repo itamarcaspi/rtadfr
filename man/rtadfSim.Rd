@@ -4,7 +4,7 @@
 \alias{rtadfSim}
 \title{Simulate critical values and date-stamping threshold sequence}
 \usage{
-rtadfSim(t, r0, nrep, testType)
+rtadfSim(t, r0 = 10, nrep = 1000, test = c("adf", "sadf", "gsadf"))
 }
 \arguments{
 \item{t}{Number of observations (i.e., length of the sample)}
@@ -13,7 +13,7 @@ rtadfSim(t, r0, nrep, testType)
 
 \item{nrep}{Number of replications}
 
-\item{testType}{Test type, either "adf", "sadf" of "gsadf".}
+\item{test}{Test type, either "adf", "sadf" of "gsadf".}
 }
 \value{
 List with 90, 95, 99 precent critical values and a threshold series
@@ -24,5 +24,5 @@ Simulates critical values and date-stamping sequences for the right-tailed
 ADF, SADF and GSADF tests.
 }
 \examples{
-cv <- cvSim(100, 10, 1000, testType = "sadf")
+cv <- rtadfSim(100, 10, 1000, test = "sadf")
 }

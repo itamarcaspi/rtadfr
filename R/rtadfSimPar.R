@@ -6,19 +6,15 @@
 #' @param t   Number of observations (i.e., length of the sample)
 #' @param r0  Minimal window size
 #' @param nrep  Number of replications
-#' @param testType  Test type, either "adf", "sadf" of "gsadf".
+#' @param test  Test type, either "adf", "sadf" of "gsadf".
 #'
 #' @return List with 90, 95, 99 precent critical values and a threshold series
 #'   for the date-stamping procedure
 #' @export
 #'
 #' @examples
-#' cv <- cvSimPar(100, 10, 1000, testType = "sadf")
-rtadfSimPar <- function(t, nrep, testType) {
-
-  # Setup -------------------------------------------------------------------
-
-  r0 <- round(t*(0.01 + 1.8/sqrt(t))) #minimal window size
+#' cv <- rtadfSimPar(100, 10, 1000, test = "sadf")
+rtadfSimPar <- function(t, r0 = 10, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
 
   # The parallel Monte Carlo simulation loop----------------------------------
 
@@ -30,7 +26,7 @@ rtadfSimPar <- function(t, nrep, testType) {
   MCresults <- foreach(i = 1:nrep, .inorder = FALSE,
                        .packages = c("urca", "RcppEigen"),
                        .combine = cbind) %dorng% {
-                         teststat(t, r0, testType)
+                         teststat(t, r0, test)
                        }
 
   end.time <- Sys.time()
@@ -41,7 +37,7 @@ rtadfSimPar <- function(t, nrep, testType) {
 
   # Calculate critical values--------------------------------------------------
 
-  if (testType == "adf") {
+  if (test == "adf") {
 
     statistics   <- as.numeric(MCresults)
 
@@ -61,12 +57,14 @@ rtadfSimPar <- function(t, nrep, testType) {
 
     testCVs      <- quantile(statistics, probs = c(0.90, 0.95, 0.99))
     datestampCVs <- colQuantiles(datestampSeq, probs = c(0.90, 0.95, 0.99))
+    NAmat        <- matrix(NA, nrow = r0 - 1, ncol = 3)
+    datestampCVs <- rbind(NAmat, datestampCVs)
 
     #generate a list with critical values (test and datestamp)
     simResults        <- list("testCVs" = testCVs, "datestampCVs" = datestampCVs)
     names(simResults) <- c("testCVs", "datestampCVs")
 
-    simResults$testCVs
+    simResults
   }
 
 }

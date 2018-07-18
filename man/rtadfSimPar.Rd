@@ -4,16 +4,16 @@
 \alias{rtadfSimPar}
 \title{Simulate critical values and date-stamping threshold sequence in parallel}
 \usage{
-rtadfSimPar(t, nrep, testType)
+rtadfSimPar(t, r0 = 10, nrep = 1000, test = c("adf", "sadf", "gsadf"))
 }
 \arguments{
 \item{t}{Number of observations (i.e., length of the sample)}
 
+\item{r0}{Minimal window size}
+
 \item{nrep}{Number of replications}
 
-\item{testType}{Test type, either "adf", "sadf" of "gsadf".}
-
-\item{r0}{Minimal window size}
+\item{test}{Test type, either "adf", "sadf" of "gsadf".}
 }
 \value{
 List with 90, 95, 99 precent critical values and a threshold series
@@ -24,5 +24,5 @@ Simulates in parallel critical values and date-stamping sequences for the
 right-tailed ADF, SADF and GSADF tests.
 }
 \examples{
-cv <- cvSimPar(100, 10, 1000, testType = "sadf")
+cv <- rtadfSimPar(100, 10, 1000, test = "sadf")
 }
