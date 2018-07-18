@@ -1,0 +1,53 @@
+ur.adf <- function(y, type = c("none", "drift", "trend"),
+                      lags = 1, selectlags = c("Fixed", "AIC", "BIC")) {
+
+  ur.df(y, type, lags, selectlags)@teststat
+}
+
+ur.dfr1r2 <- function(y, r1, r2, type = c("none", "drift", "trend"),
+                      lags = 1, selectlags = c("Fixed", "AIC", "BIC")) {
+
+  ytrim  <- y[r1:r2]
+  ur.adf(ytrim, type, lags, selectlags)
+}
+
+
+ur.sadf <- function(y, r0, type = c("none", "drift", "trend"),
+                    lags = 1, selectlags = c("Fixed", "AIC", "BIC")) {
+
+  adfs <- rep(NA, length(y) - r0)
+  adfs[1] <- ur.dfr1r2(y,1,r0,type,lags,selectlags)
+  j <- r0 + 1
+  for (r2 in j:length(y)) {
+    adfs[2 + r2 - j] <- ur.dfr1r2(y,1,r2,type,lags,selectlags)
+  }
+  maxstat <- max(adfs)
+  list("SADF" = maxstat, "ADFsequence" = adfs)
+}
+
+ur.bsadf <- function(y, r0, r2, type = c("none", "drift", "trend"),
+                     lags = 1, selectlags = c("Fixed", "AIC", "BIC")) {
+
+  maxtstat <- ur.dfr1r2(y,1,r2,type,lags,selectlags)
+  j <- r2 - r0
+  for (r1 in 2:j) {
+    temp <- ur.dfr1r2(y,r1,r2,type,lags,selectlags)
+    if (temp > maxtstat) {
+      maxtstat <- temp
+    }
+  }
+  return(maxtstat)
+}
+
+ur.gsadf <- function(y, r0, type = c("none", "drift", "trend"),
+                     lags = 1, selectlags = c("Fixed", "AIC", "BIC")) {
+
+  bsadfs <- rep(NA, length(y) - r0)
+  bsadfs[1] <- ur.bsadf(y,r0,r0,type,lags,selectlags)
+  j <- r0 + 1
+  for (r2 in j:length(y)) {
+    bsadfs[2 + r2 - j] <- ur.bsadf(y,r0,r2,type,lags,selectlags)
+  }
+  maxstat <- max(bsadfs)
+  list("stat" = maxstat, "sequence" = bsadfs)
+}

@@ -1,0 +1,13 @@
+citHeader("To cite rtadf in publications use:")
+
+citEntry(entry = "Article",
+  title        = "{rtadfr}: Testing for Bubbles with R",
+  author       = as.person("Itamar Caspi")
+  journal      = "Mimeo",
+  year         = "2018",
+
+  textVersion  =
+  paste("Caspi, I. (2018).",
+        "rtadf: Testing for Bubbles with R",
+        Mimeo)
+)

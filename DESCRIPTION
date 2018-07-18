@@ -1,0 +1,18 @@
+Package: rtadfr
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: Itamar Caspi
+Maintainer: The package maintainer <caspi.itamar@gmail.com>
+Description: 
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+Imports:
+  doParallel,
+  doRNG,
+  matrixStats,
+  urca,
+  RcppEigen,
+  Rcpp
+RoxygenNote: 6.0.1
