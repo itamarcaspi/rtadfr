@@ -1,4 +1,4 @@
-rtadfr <img src="man/figures/logo.png" align="right" width="20%" height="20%"/>
+rtadfr <img src="man/figures/logo.png" align="right" width="15%" height="20%"/>
 ======================
 
 The R package *rtadfr* (Right Tailed ADF Tests with R) provides methods and tools for testing for bubbles in univariate time series.
