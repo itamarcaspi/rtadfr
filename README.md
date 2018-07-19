@@ -21,7 +21,7 @@ library(rtadfr)
 # SADF test
 
 data(snp)  # load S&P 500 data
-T    <-nrow(snp)  # Sample size
+T    <- nrow(snp)  # Sample size
 r0   <- round(T*(0.01+1.8/sqrt(T)))  # Minimal window size
 
 test <- rtadf(snp[,1], r0, test = "sadf")  # estimate test statistic and date-stamping sequence
