@@ -2,7 +2,7 @@ Package: rtadfr
 Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
-Authors@R: person("Itamar", "Caspi", "caspi.itamar@gmail.com", role = c("aut", "cre"))
+Authors@R: person("Itamar", "Caspi", email = "caspi.itamar@gmail.com", role = c("aut", "cre"))
 Maintainer: Itamar Caspi <caspi.itamar@gmail.com>
 Description: rtadfr (right-tail augmented Dickey-Fuller with R), an R package that facilitates
               the performance of time series based tests that help detect and date-stamp asset price bubbles.

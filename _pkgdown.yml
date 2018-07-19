@@ -1,0 +1,35 @@
+template:
+  params:
+    bootswatch: cosmo
+
+navbar:
+  title: "rtadfr"
+  left:
+    - text: "Vignettes"
+      href: articles/index.html
+    - text: "Functions"
+      href: reference/index.html
+    - text: "News"
+      href: news/index.html
+
+right:
+   - icon: fa-github
+     href: https://github.com/icaspi99/rtadfr
+   - icon: fa-home
+     href: http://www.itamarcaspi.net
+
+reference:
+- title: Test statistics
+  desc: Function to estimate the ADF/SADF/GSADF test statstics
+  contents:
+  - '`rtadf`'
+  title: Critical values
+  desc: Functions for simulating critical values
+  contents:
+  - '`rtadfBoot`'
+  - '`rtadfSim`'
+  - '`rtadfSimPar`'
+  title: Data
+  desc: Date for examples
+  contents:
+  - '`snp`'
