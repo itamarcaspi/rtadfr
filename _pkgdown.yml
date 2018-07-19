@@ -1,0 +1,15 @@
+reference:
+- title: Test statistics
+  desc: Function to estimate the ADF/SADF/GSADF test statstics
+  contents:
+  - '`rtadf`'
+  title: Critical values
+  desc: Functions for simulating critical values
+  contents:
+  - '`rtadfBoot`'
+  - '`rtadfSim`'
+  - '`rtadfSimPar`'
+  title: Data
+  desc: Sample data to be used in the examples
+  contents:
+  - '`snp`'
