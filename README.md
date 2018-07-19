@@ -1,4 +1,4 @@
-rtadfr <img src="man/figures/logo.png" align="right" width="15%" height="20%"/>
+rtadfr <img src="man/figures/logo.png" align="right" width="15%" height="15%"/>
 ======================
 
 The R package *rtadfr* (Right Tailed ADF Tests with R) provides methods and tools for testing for explosive roots in univariate time series (Phillips, Wu, and Yu, 2011; Phillis, Shi, and Yu, 2015). This package is a reincarnation of the *rtadf* EViews add-in (Caspi, 2017).
