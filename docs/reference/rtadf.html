@@ -32,7 +32,8 @@
 
 <meta property="og:title" content="Estimate the ADF/SADF/GSADF test statistic — rtadf" />
 
-<meta property="og:description" content="Calculates recursive and non-recursive right-tailed unit root tests statistics." />
+<meta property="og:description" content="Calculates recursive and non-recursive right-tailed unit root tests
+statistics." />
 
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -109,7 +110,8 @@
 
     <div class="ref-description">
     
-    <p>Calculates recursive and non-recursive right-tailed unit root tests statistics.</p>
+    <p>Calculates recursive and non-recursive right-tailed unit root tests
+statistics.</p>
     
     </div>
 
@@ -152,10 +154,40 @@ by lags.</p></td>
 
     <p>List with test statistic, date-stamping sequence</p>
     
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Phillips, P. C. B., Wu, Y., &amp; Yu, J. (2011). Explosive Behavior
+in the 1990s Nasdaq: When Did Exuberance Escalate Asset Values?,
+<em>International Economic Review</em>, 201(1), 201--226.</p>
+<p>Phillips, P. C. B., Shi, S., &amp; Yu, J. (2015). Testing for multiple bubbles:
+Historical episodes of exuberance and collapse in the S&amp;P 500.
+<em>International Economic Review</em>, 56(4), 1034--1078.</p>
+    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>y</span>  <span class='kw'>&lt;-</span> <span class='fu'>rnorm</span>(<span class='fl'>100</span>)
-<span class='no'>r0</span> <span class='kw'>&lt;-</span> <span class='fu'>round</span>(<span class='no'>t</span>*(<span class='fl'>0.01</span>+<span class='fl'>1.8</span>/<span class='fu'>sqrt</span>(<span class='no'>t</span>))) <span class='co'>#minimal window size</span></div><div class='output co'>#&gt; <span class='error'>Error in sqrt(t): non-numeric argument to mathematical function</span></div><div class='input'><span class='fu'>rtadf</span>(<span class='no'>y</span>, <span class='no'>r0</span>, <span class='kw'>test</span> <span class='kw'>=</span><span class='st'>"sadf"</span>)</div><div class='output co'>#&gt; <span class='error'>Error in ur.sadf(y, r0, type, lags, selectlags): object 'r0' not found</span></div></pre>
+    <pre class="examples"><div class='input'><span class='no'>T</span>  <span class='kw'>&lt;-</span> <span class='fl'>100</span>
+<span class='no'>y</span>  <span class='kw'>&lt;-</span> <span class='fu'>rnorm</span>(<span class='no'>T</span>)
+<span class='no'>r0</span> <span class='kw'>&lt;-</span> <span class='fu'>round</span>(<span class='no'>T</span>*(<span class='fl'>0.01</span>+<span class='fl'>1.8</span>/<span class='fu'>sqrt</span>(<span class='no'>T</span>))) <span class='co'>#minimal window size</span>
+<span class='fu'>rtadf</span>(<span class='no'>y</span>, <span class='no'>r0</span>, <span class='kw'>test</span> <span class='kw'>=</span><span class='st'>"sadf"</span>)</div><div class='output co'>#&gt; $testStat
+#&gt; [1] -2.845611
+#&gt; 
+#&gt; $testSeq
+#&gt;   [1]        NA        NA        NA        NA        NA        NA        NA
+#&gt;   [8]        NA        NA        NA        NA        NA        NA        NA
+#&gt;  [15]        NA        NA        NA        NA -2.845611 -2.962393 -3.069983
+#&gt;  [22] -3.178152 -3.334821 -3.507838 -3.488751 -3.735607 -4.086355 -4.188658
+#&gt;  [29] -4.144043 -3.905135 -4.336086 -4.438325 -4.506458 -4.328225 -4.437199
+#&gt;  [36] -4.612012 -4.459419 -4.533838 -4.630131 -4.712298 -4.780817 -4.934462
+#&gt;  [43] -5.001980 -5.052667 -5.122090 -4.712582 -4.966174 -5.013808 -5.070491
+#&gt;  [50] -5.090060 -5.325440 -5.382003 -5.456267 -5.516554 -5.572698 -5.608973
+#&gt;  [57] -5.556386 -5.801160 -5.854234 -6.005693 -6.017954 -6.157096 -6.132478
+#&gt;  [64] -6.191096 -6.288127 -6.176227 -6.471504 -6.516493 -6.532374 -6.564288
+#&gt;  [71] -6.339686 -6.624039 -6.758409 -6.801009 -6.644011 -6.637201 -6.634453
+#&gt;  [78] -6.709752 -6.752331 -6.797451 -6.683811 -6.499152 -6.510040 -6.527590
+#&gt;  [85] -6.640657 -6.640392 -6.572922 -6.598442 -6.867047 -6.911572 -6.945343
+#&gt;  [92] -6.938110 -6.853645 -6.968786 -6.985652 -6.874317 -7.028427 -6.991871
+#&gt;  [99] -6.913288 -7.072469
+#&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -163,6 +195,8 @@ by lags.</p></td>
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
+
+      <li><a href="#references">References</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

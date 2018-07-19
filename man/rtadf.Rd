@@ -27,10 +27,21 @@ by lags.}
 List with test statistic, date-stamping sequence
 }
 \description{
-Calculates recursive and non-recursive right-tailed unit root tests statistics.
+Calculates recursive and non-recursive right-tailed unit root tests
+statistics.
 }
 \examples{
-y  <- rnorm(100)
-r0 <- round(t*(0.01+1.8/sqrt(t))) #minimal window size
+T  <- 100
+y  <- rnorm(T)
+r0 <- round(T*(0.01+1.8/sqrt(T))) #minimal window size
 rtadf(y, r0, test ="sadf")
+}
+\references{
+Phillips, P. C. B., Wu, Y., & Yu, J. (2011). Explosive Behavior
+in the 1990s Nasdaq: When Did Exuberance Escalate Asset Values?,
+\emph{International Economic Review}, 201(1), 201--226.
+
+Phillips, P. C. B., Shi, S., & Yu, J. (2015). Testing for multiple bubbles:
+Historical episodes of exuberance and collapse in the S&P 500.
+\emph{International Economic Review}, 56(4), 1034--1078.
 }

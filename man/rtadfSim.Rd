@@ -26,3 +26,12 @@ ADF, SADF and GSADF tests.
 \examples{
 cv <- rtadfSim(t = 100, r0 = 10, nrep = 1000, test = "sadf")
 }
+\references{
+Phillips, P. C. B., Wu, Y., & Yu, J. (2011). Explosive Behavior
+in the 1990s Nasdaq: When Did Exuberance Escalate Asset Values?,
+\emph{International Economic Review}, 201(1), 201--226.
+
+Phillips, P. C. B., Shi, S., & Yu, J. (2015). Testing for multiple bubbles:
+Historical episodes of exuberance and collapse in the S&P 500.
+\emph{International Economic Review}, 56(4), 1034--1078.
+}
