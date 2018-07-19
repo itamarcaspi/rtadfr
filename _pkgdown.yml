@@ -25,7 +25,6 @@ reference:
 - title: Critical values
   desc: Functions for simulating critical values
   contents:
-  - '`rtadfBoot`'
   - '`rtadfSim`'
   - '`rtadfSimPar`'
 - title: Data
