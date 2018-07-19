@@ -2,9 +2,9 @@ Package: rtadfr
 Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
-Authors@R: person("Itamar", "Caspi", email = "caspi.itamar@gmail.com",
-                  role = c("aut", "cre"))
-Maintainer: The package maintainer <caspi.itamar@gmail.com>
+Authors@R: person("Itamar", "Caspi", email = "caspi.itamar@gmail.com", role = c("aut", "cre")
+    )
+Maintainer: Itamar Caspi <caspi.itamar@gmail.com>
 Description: rtadfr (right-tail augmented Dickey-Fuller with R), an R package that facilitates
               the performance of time series based tests that help detect and date-stamp asset price bubbles.
               The detection strategy is based on a right-tail variation of the standard augmented Dickey-Fuller (ADF) test
@@ -25,3 +25,5 @@ Depends:
   RcppEigen,
   Rcpp
 RoxygenNote: 6.0.1
+BugReports: https://github.com/icaspi99/rtadfr/issues
+url: 
