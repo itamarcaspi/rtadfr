@@ -2,7 +2,7 @@
 % Please edit documentation in R/rtadf.R
 \name{rtadf}
 \alias{rtadf}
-\title{rtadf}
+\title{Estimate the ADF/SADF/GSADF test statistic}
 \usage{
 rtadf(y, r0, test = c("adf", "sadf", "gsadf"), type = c("none", "drift",
   "trend"), lags = 1, selectlags = c("Fixed", "AIC", "BIC"))

@@ -13,7 +13,7 @@ Description: rtadfr (right-tail augmented Dickey-Fuller with R), an R package th
               and generalized SADF (GSADF; Phillips, Shi, and Yu 2015). It calculates the test statistics
               for each of the above four tests, simulates the corresponding exact finite sample critical values
               and p values via Monte Carlo methods, under the assumption of Gaussian innovations.
-License: GPL (>= 2)
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Depends:

@@ -11,8 +11,8 @@
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -68,23 +68,17 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
-     
-  </a>
+  <a href="../reference/index.html">Functions</a>
 </li>
 <li>
-  <a href="../reference/index.html">Reference</a>
-</li>
-<li>
-  <a href="../news/index.html">Changelog</a>
+  <a href="../news/index.html">News</a>
 </li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/icaspi99/rtadfr">
-    <span class="fa fa-github fa-lg"></span>
+  <a href="https://github.com/icaspi99/rtadfr/">
+    <span class="fa fa-github"></span>
      
   </a>
 </li>
@@ -114,8 +108,8 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
+          <h2 id="section-test-statistics" class="hasAnchor"><a href="#section-test-statistics" class="anchor"></a>Test statistics</h2>
+          <p class="section-desc"><p>Function to estimate the ADF/SADF/GSADF test statstics</p></p>
         </th>
       </tr>
       <tr>
@@ -123,8 +117,16 @@
         <td>
           <p><code><a href="rtadf.html">rtadf()</a></code> </p>
         </td>
-        <td><p>rtadf</p></td>
-      </tr><tr>
+        <td><p>Estimate the ADF/SADF/GSADF test statistic</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-critical-values" class="hasAnchor"><a href="#section-critical-values" class="anchor"></a>Critical values</h2>
+          <p class="section-desc"><p>Functions for simulating critical values</p></p>
+        </th>
+      </tr>
+      <tr>
         
         <td>
           <p><code><a href="rtadfBoot.html">rtadfBoot()</a></code> </p>
@@ -142,7 +144,15 @@
           <p><code><a href="rtadfSimPar.html">rtadfSimPar()</a></code> </p>
         </td>
         <td><p>Simulate critical values and date-stamping threshold sequence in parallel</p></td>
-      </tr><tr>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-data" class="hasAnchor"><a href="#section-data" class="anchor"></a>Data</h2>
+          <p class="section-desc"><p>Data for the examples</p></p>
+        </th>
+      </tr>
+      <tr>
         
         <td>
           <p><code><a href="snp.html">snp</a></code> </p>
@@ -156,14 +166,16 @@
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#section-test-statistics">Test statistics</a></li>
+      <li><a href="#section-critical-values">Critical values</a></li>
+      <li><a href="#section-data">Data</a></li>
     </ul>
   </div>
 </div>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Itamar caspi.itamar@gmail.com Caspi.</p>
+  <p>Developed by <a href='http://www.itamarcaspi.com'>Itamar Caspi</a>.</p>
 </div>
 
 <div class="pkgdown">
