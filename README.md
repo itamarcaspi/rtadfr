@@ -16,7 +16,7 @@ devtools::install_github("icaspi99/rtadfr")
 ## Usage
 
 ```s
-library(rtadf)
+library(rtadfr)
 
 # SADF test
 
