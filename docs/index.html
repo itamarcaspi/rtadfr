@@ -89,7 +89,7 @@
 <span class="co"># SADF test</span>
 
 data(snp)  <span class="co"># load S&amp;P 500 data</span>
-T    &lt;-nrow(snp)  <span class="co"># Sample size</span>
+T    &lt;- nrow(snp)  <span class="co"># Sample size</span>
 r0   &lt;- round(T*(<span class="dv">0</span>.01+<span class="dv">1</span>.8/sqrt(T)))  <span class="co"># Minimal window size</span>
 
 test &lt;- rtadf(snp[,<span class="dv">1</span>], r0, test = <span class="st">"sadf"</span>)  <span class="co"># estimate test statistic and date-stamping sequence</span>

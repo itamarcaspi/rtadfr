@@ -10,7 +10,7 @@
 #'
 #' @return List with 90, 95, 99 precent critical values and a threshold series
 #'   for the date-stamping procedure
-#' @export
+#'
 #'
 #' @examples
 #' cv <- rtadfSim(t = 100, r0 = 10, nrep = 1000, test = "sadf")
