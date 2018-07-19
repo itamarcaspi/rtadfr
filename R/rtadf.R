@@ -1,4 +1,4 @@
-#' rtadf
+#' Estimate the ADF/SADF/GSADF test statistic
 #'
 #' Calculates recursive and non-recursive right-tailed unit root tests statistics.
 #'

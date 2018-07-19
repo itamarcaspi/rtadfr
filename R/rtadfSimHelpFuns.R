@@ -63,7 +63,7 @@ gsadf <- function(y, r0) {
   return(results)
 }
 
-# a function that generates the results of a single "experiment"
+# a function that generates the results of a single MC "experiment"
 teststat <- function(t, r0, testType){
 
   eta   <- 1

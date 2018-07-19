@@ -13,8 +13,8 @@
 #' @export
 #'
 #' @examples
-#' cv <- rtadfSim(100, 10, 1000, test = "sadf")
-rtadfSim <- function(t, r0 = 10, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
+#' cv <- rtadfSim(t = 100, r0 = 10, nrep = 1000, test = "sadf")
+rtadfSim <- function(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
 
   statistics   <- rep(NA, nrep) #holds the simulated test statistics
   datestampSeq <- matrix(NA, nrow = t - r0 + 1,
