@@ -1,6 +1,9 @@
 rtadfr <img src="man/figures/logo.png" align="right" width="15%" height="15%"/>
 ======================
 
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+
+
 The R package *rtadfr* (Right Tailed ADF Tests with R) facilitates the Phillips, Wu, and Yu (2011) and Phillips, Shi, and Yu (2015) right tailed unit root tests for exuberance behavior. This package is planned to be the R equivalent of the *rtadf* EViews add-in (Caspi, 2017).
 
 ## Installation
