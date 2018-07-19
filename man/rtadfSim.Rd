@@ -4,7 +4,7 @@
 \alias{rtadfSim}
 \title{Simulate critical values and date-stamping threshold sequence}
 \usage{
-rtadfSim(t, r0 = 10, nrep = 1000, test = c("adf", "sadf", "gsadf"))
+rtadfSim(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf"))
 }
 \arguments{
 \item{t}{Number of observations (i.e., length of the sample)}
@@ -24,5 +24,5 @@ Simulates critical values and date-stamping sequences for the right-tailed
 ADF, SADF and GSADF tests.
 }
 \examples{
-cv <- rtadfSim(100, 10, 1000, test = "sadf")
+cv <- rtadfSim(t = 100, r0 = 10, nrep = 1000, test = "sadf")
 }
