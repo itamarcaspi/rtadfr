@@ -1,7 +1,7 @@
 rtadfr <img src="man/figures/logo.png" align="right" width="15%" height="20%"/>
 ======================
 
-The R package *rtadfr* (Right Tailed ADF Tests with R) provides methods and tools for testing for bubbles in univariate time series.
+The R package *rtadfr* (Right Tailed ADF Tests with R) provides methods and tools for testing for explosive roots in univariate time series (Phillips, Wu, and Yu, 2011; Phillis, Shi, and Yu, 2015). This package is a reincarnation of the *rtadf* EViews add-in (Caspi, 2017).
 
 ## Installation
 
@@ -37,8 +37,8 @@ dateStampDf <- ts(cbind(testStat$testSeq, cvs$datestampCVs[,2]),
 ts.plot(df, plot.type = "single", col=c("blue", "red"))
 ```
 
-## For more information on the methods used in the package see
-
+## References
+  * Caspi, I. (2017). Rtadf: Testing for Bubbles with EViews. *Journal of Statistical Software*, 81(c01).
   * Phillips, P. C. B., Wu, Y., & Yu, J. (2011). Explosive Behavior in the 1990s Nasdaq: When Did Exuberance Escalate Asset Values? *International Economic Review*, 201(1), 201--226.
   * Phillips, P. C. B., Shi, S., & Yu, J. (2015). Testing for multiple bubbles: Historical episodes of exuberance and collapse in the S&P 500. *International Economic Review*, 56(4), 1034–1078.
   
