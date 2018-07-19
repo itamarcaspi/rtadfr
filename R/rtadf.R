@@ -16,8 +16,9 @@
 #' @export
 #'
 #' @examples
-#' y  <- rnorm(100)
-#' r0 <- round(t*(0.01+1.8/sqrt(t))) #minimal window size
+#' T  <- 100
+#' y  <- rnorm(T)
+#' r0 <- round(T*(0.01+1.8/sqrt(T))) #minimal window size
 #' rtadf(y, r0, test ="sadf")
 rtadf <- function(y, r0, test = c("adf", "sadf", "gsadf"),
                   type = c("none", "drift", "trend"),
