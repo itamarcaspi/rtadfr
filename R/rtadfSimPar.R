@@ -10,6 +10,16 @@
 #'
 #' @return List with 90, 95, 99 precent critical values and a threshold series
 #'   for the date-stamping procedure
+#'
+#' @references
+#' Phillips, P. C. B., Wu, Y., & Yu, J. (2011). Explosive Behavior
+#' in the 1990s Nasdaq: When Did Exuberance Escalate Asset Values?,
+#' \emph{International Economic Review}, 201(1), 201--226.
+#'
+#' Phillips, P. C. B., Shi, S., & Yu, J. (2015). Testing for multiple bubbles:
+#' Historical episodes of exuberance and collapse in the S&P 500.
+#' \emph{International Economic Review}, 56(4), 1034--1078.
+#'
 #' @export
 #'
 #' @examples

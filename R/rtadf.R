@@ -1,6 +1,7 @@
 #' Estimate the ADF/SADF/GSADF test statistic
 #'
-#' Calculates recursive and non-recursive right-tailed unit root tests statistics.
+#' Calculates recursive and non-recursive right-tailed unit root tests
+#' statistics.
 #'
 #' @param y     Vector to be tested for an explosive root.
 #' @param r0    Minimal Window size.
@@ -13,6 +14,16 @@
 #'   by lags.
 #'
 #' @return  List with test statistic, date-stamping sequence
+#'
+#' @references
+#' Phillips, P. C. B., Wu, Y., & Yu, J. (2011). Explosive Behavior
+#' in the 1990s Nasdaq: When Did Exuberance Escalate Asset Values?,
+#' \emph{International Economic Review}, 201(1), 201--226.
+#'
+#' Phillips, P. C. B., Shi, S., & Yu, J. (2015). Testing for multiple bubbles:
+#' Historical episodes of exuberance and collapse in the S&P 500.
+#' \emph{International Economic Review}, 56(4), 1034--1078.
+#'
 #' @export
 #'
 #' @examples
