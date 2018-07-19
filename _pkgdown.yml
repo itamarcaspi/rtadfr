@@ -16,7 +16,8 @@ navbar:
   right:
    - icon: fa-github
      href: https://github.com/icaspi99/rtadfr/
-
+   - icon: fa-home
+     href: http://www,itamarcaspi.net/
 reference:
 - title: Test statistics
   desc: Function to estimate the ADF/SADF/GSADF test statstics
