@@ -1,6 +1,6 @@
 Package: rtadfr
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Time Series Tests for Exuberance
 Version: 0.1.0
 Authors@R: person("Itamar", "Caspi", email = "caspi.itamar@gmail.com", role = c("aut", "cre"))
 Maintainer: Itamar Caspi <caspi.itamar@gmail.com>
