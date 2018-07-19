@@ -6,7 +6,7 @@ The R package *rtadfr* (Right Tailed ADF Tests with R) facilitates the Phillips,
 ## Installation
 
 You can install the **development** version from
-[Github](https://github.com/icaspi99/rtadf)
+[Github](https://github.com/icaspi99/rtadfr)
 
 ```s
 # install.packages("devtools")
