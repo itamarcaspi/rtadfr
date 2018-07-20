@@ -1,6 +1,7 @@
 rtadfr <img src="man/figures/logo.png" align="right" width="15%" height="15%"/>
 ======================
 
+[![Travis-CI Build Status](https://travis-ci.org/icaspi99/rtadfr.svg?branch=master)](https://travis-ci.org/icaspi99/rtadfr)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 
 
