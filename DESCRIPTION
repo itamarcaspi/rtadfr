@@ -20,9 +20,9 @@ Depends:
   doParallel,
   doRNG,
   matrixStats,
-  urca,
+  Rcpp,
   RcppEigen,
-  Rcpp
+  urca
 RoxygenNote: 6.0.1
 BugReports: https://github.com/icaspi99/rtadfr/issues
 URL: https://github.com/icaspi99/rtadfr
