@@ -1,7 +1,7 @@
 Package: rtadfr
 Type: Package
 Title: Testing for Bubbles with R
-Version: 0.1.0
+Version: 0.1.0.9000
 Authors@R: person("Itamar", "Caspi", email = "caspi.itamar@gmail.com", role = c("aut", "cre"))
 Maintainer: Itamar Caspi <caspi.itamar@gmail.com>
 Description: rtadfr (right-tail augmented Dickey-Fuller with R), an R package that facilitates
