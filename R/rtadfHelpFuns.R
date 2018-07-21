@@ -1,7 +1,7 @@
 ur.adf <- function(y, type = c("none", "drift", "trend"),
                       lags = 1, selectlags = c("Fixed", "AIC", "BIC")) {
 
-  ur.df(y, type, lags, selectlags)@teststat
+  urca::ur.df(y, type, lags, selectlags)@teststat
 }
 
 ur.adfr1r2 <- function(y, r1, r2, type = c("none", "drift", "trend"),
