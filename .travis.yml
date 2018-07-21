@@ -1,6 +1,12 @@
 # Sample .travis.yml for R projects
 
 language: r
+
+r:
+  - oldrel
+  - release
+  - devel
+
 warnings_are_errors: true
 sudo: false
 cache: packages
@@ -10,5 +16,3 @@ notifications:
     on_success: true
     on_failure: true
 
-after_success:
-  - Rscript -e 'library(covr);coveralls()'
