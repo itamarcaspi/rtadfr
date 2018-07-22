@@ -22,6 +22,9 @@
 #'
 #' @export
 #'
+#' @importFrom doRNG %dorng%
+#' @importFrom RcppEigen fastLmPure
+#'
 #' @examples
 #' cv <- rtadfSimPar(t = 100, r0 = 10, nrep = 1000, test = "sadf")
 rtadfSimPar <- function(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf")) {

@@ -26,6 +26,8 @@
 #'
 #' @export
 #'
+#' @importFrom urca ur.df
+#'
 #' @examples
 #' T  <- 100
 #' y  <- rnorm(T)

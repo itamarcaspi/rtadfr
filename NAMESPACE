@@ -3,3 +3,6 @@
 export(rtadf)
 export(rtadfSim)
 export(rtadfSimPar)
+importFrom(RcppEigen,fastLmPure)
+importFrom(doRNG,"%dorng%")
+importFrom(urca,ur.df)
