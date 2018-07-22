@@ -66,7 +66,7 @@ rtadfSimPar <- function(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
     datestampSeq <- do.call(rbind,as.matrix(MCresults[seq(2,length(MCresults),2)]))
 
     testCVs      <- quantile(statistics, probs = c(0.90, 0.95, 0.99))
-    datestampCVs <- colQuantiles(datestampSeq, probs = c(0.90, 0.95, 0.99))
+    datestampCVs <- apply(datestampSeq, 2, quantile, probs = c(0.90, 0.95, 0.99), na.rm = TRUE)
     NAmat        <- matrix(NA, nrow = r0 - 1, ncol = 3)
     datestampCVs <- rbind(NAmat, datestampCVs)
 
