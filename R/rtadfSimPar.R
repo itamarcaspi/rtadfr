@@ -22,10 +22,9 @@
 #'
 #' @export
 #'
-#' @importFrom  foreach foreach
-#' @importFrom foreach %dopar%
-#' @import doParallel
-#' @importFrom doRNG %dorng%
+#' @importFrom doParallel registerDoParallel
+#' @import doRNG
+#' @import foreach
 #' @importFrom RcppEigen fastLmPure
 #' @importFrom stats rnorm
 #' @importFrom stats embed
