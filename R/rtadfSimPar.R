@@ -22,6 +22,7 @@
 #'
 #' @export
 #'
+#' @importFrom doParallel registerDoParallel
 #' @importFrom doRNG %dorng%
 #' @importFrom RcppEigen fastLmPure
 #' @importFrom stats rnorm
@@ -34,7 +35,7 @@ rtadfSimPar <- function(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
   # The parallel Monte Carlo simulation loop----------------------------------
 
   cl <- parallel::makeCluster(parallel::detectCores())
-  doparallel::registerDoParallel(cl)
+  registerDoParallel(cl)
 
   MCresults <- foreach::foreach(i = 1:nrep, .inorder = FALSE,
                        .packages = c("RcppEigen"),
