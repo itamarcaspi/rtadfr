@@ -39,7 +39,7 @@ rtadfSimPar <- function(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
 
   MCresults <- foreach::foreach(i = 1:nrep, .inorder = FALSE,
                        .packages = c("RcppEigen"),
-                       .combine = cbind) %dorng% {
+                       .combine = cbind) doRNG::`%dorng%` {
                          teststat(t, r0, test)
                        }
 
