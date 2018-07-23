@@ -22,7 +22,6 @@
 #'
 #' @export
 #'
-#' @importFrom doParallel registerDoParallel
 #' @import doRNG
 #' @import foreach
 #' @importFrom RcppEigen fastLmPure
@@ -35,17 +34,11 @@ rtadfSimPar <- function(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
 
   # The parallel Monte Carlo simulation loop----------------------------------
 
-  cl <- parallel::makeCluster(parallel::detectCores() - 1)
-  registerDoParallel(cl)
-
-  MCresults <- foreach(i = 1:nrep, .inorder = FALSE,
+    MCresults <- foreach(i = 1:nrep, .inorder = FALSE,
                        .packages = c("RcppEigen"),
                        .combine = cbind) %dorng% {
                          teststat(t, r0, test)
                        }
-
-  parallel::stopCluster(cl)
-
 
   # Calculate critical values--------------------------------------------------
 

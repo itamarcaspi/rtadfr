@@ -19,7 +19,6 @@ BugReports: https://github.com/icaspi99/rtadfr/issues
 Depends: 
     R (>= 2.10)
 Imports: 
-    doParallel (>= 1.0.11),
     doRNG (>= 1.7.1),
     foreach (>= 1.4.4),
     RcppEigen (>= 0.3.3.4.0),
