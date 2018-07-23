@@ -36,16 +36,11 @@ rtadfSimPar <- function(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
   cl <- parallel::makeCluster(parallel::detectCores())
   doparallel::registerDoParallel(cl)
 
-  start.time <- Sys.time()
-
   MCresults <- foreach::foreach(i = 1:nrep, .inorder = FALSE,
                        .packages = c("RcppEigen"),
                        .combine = cbind) %dorng% {
                          teststat(t, r0, test)
                        }
-
-  end.time <- Sys.time()
-  time.taken <- end.time - start.time
 
   parallel::stopCluster(cl)
 
@@ -71,7 +66,7 @@ rtadfSimPar <- function(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
     datestampSeq <- do.call(rbind,as.matrix(MCresults[seq(2,length(MCresults),2)]))
 
     testCVs      <- stats::quantile(statistics, probs = c(0.90, 0.95, 0.99))
-    datestampCVs <- apply(datestampSeq, 2, quantile, probs = c(0.90, 0.95, 0.99), na.rm = TRUE)
+    datestampCVs <- apply(datestampSeq, 2, stats::quantile, probs = c(0.90, 0.95, 0.99), na.rm = TRUE)
     NAmat        <- matrix(NA, nrow = r0 - 1, ncol = 3)
     datestampCVs <- rbind(NAmat, datestampCVs)
 
