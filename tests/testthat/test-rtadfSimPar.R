@@ -9,7 +9,7 @@ if (require(testthat)) {
   sadf  <- rtadfSimPar(obs, 90, 1, test = "sadf")[[1]]
   gsadf <- rtadfSimPar(obs, 90, 1, test = "gsadf")[[1]]
 
-  expect_equal(adf, -7.02676, tolerance = 0.00001)
-  expect_equal(sadf, -6.800959, tolerance = 0.00001)
-  expect_equal(gsadf, -6.44748, tolerance = 0.00001)
+  expect_equal(adf, -2.874247, tolerance = 0.00001)
+  expect_equal(sadf[[1]], -1.739771, tolerance = 0.00001)
+  expect_equal(gsadf[[1]], -1.891693, tolerance = 0.00001)
 }
