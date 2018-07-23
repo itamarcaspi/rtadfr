@@ -22,6 +22,8 @@
 #'
 #' @export
 #'
+#' @importFrom  foreach foreach
+#' @importFrom foreach %dopar%
 #' @import doParallel
 #' @importFrom doRNG %dorng%
 #' @importFrom RcppEigen fastLmPure
@@ -37,9 +39,9 @@ rtadfSimPar <- function(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
   cl <- parallel::makeCluster(parallel::detectCores() - 1)
   registerDoParallel(cl)
 
-  MCresults <- foreach::foreach(i = 1:nrep, .inorder = FALSE,
+  MCresults <- foreach(i = 1:nrep, .inorder = FALSE,
                        .packages = c("RcppEigen"),
-                       .combine = cbind) doRNG::`%dorng%` {
+                       .combine = cbind) %dorng% {
                          teststat(t, r0, test)
                        }
 
@@ -69,7 +71,7 @@ rtadfSimPar <- function(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
     testCVs      <- stats::quantile(statistics, probs = c(0.90, 0.95, 0.99))
     datestampCVs <- apply(datestampSeq, 2, stats::quantile, probs = c(0.90, 0.95, 0.99), na.rm = TRUE)
     NAmat        <- matrix(NA, nrow = r0 - 1, ncol = 3)
-    datestampCVs <- rbind(NAmat, datestampCVs)
+    datestampCVs <- rbind(NAmat, t(datestampCVs))
 
     #generate a list with critical values (test and datestamp)
     simResults        <- list("testCVs" = testCVs, "datestampCVs" = datestampCVs)
