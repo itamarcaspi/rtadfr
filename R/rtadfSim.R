@@ -22,6 +22,9 @@
 #'
 #' @export
 #'
+#' @importFrom stats rnorm
+#' @importFrom stats embed
+#'
 #' @examples
 #' cv <- rtadfSim(t = 100, r0 = 10, nrep = 1000, test = "sadf")
 rtadfSim <- function(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
@@ -54,7 +57,7 @@ rtadfSim <- function(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
 
   if (test == "adf") {
 
-    testCVs <- quantile(statistics, probs = c(0.90, 0.95, 0.99))
+    testCVs <- stats::quantile(statistics, probs = c(0.90, 0.95, 0.99))
 
     #generate a list with critical values
     simResults <- list("testCVs" = testCVs)
@@ -64,7 +67,7 @@ rtadfSim <- function(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
 
   } else {
 
-    testCVs      <- quantile(statistics, probs = c(0.90, 0.95, 0.99))
+    testCVs      <- stats::quantile(statistics, probs = c(0.90, 0.95, 0.99))
     datestampCVs <- apply(datestampSeq, 1, quantile, probs = c(0.90, 0.95, 0.99), na.rm = TRUE)
     NAmat        <- matrix(NA, nrow = r0 - 1, ncol = 3)
     datestampCVs <- rbind(NAmat, datestampCVs)
