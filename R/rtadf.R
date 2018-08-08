@@ -29,9 +29,9 @@
 #' @importFrom urca ur.df
 #'
 #' @examples
-#' T  <- 100
-#' y  <- rnorm(T)
-#' r0 <- round(T*(0.01+1.8/sqrt(T))) #minimal window size
+#' t  <- 100
+#' y  <- rnorm(t)
+#' r0 <- round(t*(0.01+1.8/sqrt(t))) # minimal window size
 #' rtadf(y, r0, test ="sadf")
 rtadf <- function(y, r0, test = c("adf", "sadf", "gsadf"),
                   type = c("none", "drift", "trend"),
@@ -39,19 +39,24 @@ rtadf <- function(y, r0, test = c("adf", "sadf", "gsadf"),
 
 
   if (test == "adf") {
-    testStat <- ur.adf(y, type, lags, selectlags)
-    list("testStat" = testStat)
+    testStat <- ur.df(y, type, lags, selectlags)@teststat
+    output <- list("testStat" = testStat)
   } else if (test == "sadf") {
     testStat <- ur.sadf(y, r0, type, lags, selectlags)$stat
     testSeq  <- c(rep(NA, r0 - 1),
                   ur.sadf(y, r0, type, lags, selectlags)$sequence)
-    list("testStat" = testStat, "testSeq" = testSeq)
+    output <- list("testStat" = testStat, "testSeq" = testSeq)
   } else if (test == "gsadf") {
     testStat <- ur.gsadf(y, r0, type, lags, selectlags)$stat
     testSeq  <- c(rep(NA, r0 - 1),
                   ur.gsadf(y, r0, type, lags, selectlags)$sequence)
-    list("testStat" = testStat, "testSeq" = testSeq)
+    output <- list("testStat" = testStat, "testSeq" = testSeq)
   }
 
+  output$Cval <- data.frame("significance level" = c("90%", "95%", "99%"),
+                                      "critical values" = sapply(c(0.9, 0.95, 0.99),
+                                                                 rtadfCval, t = length(y),
+                                                                 testType = test))
 
+  return(output)
 }

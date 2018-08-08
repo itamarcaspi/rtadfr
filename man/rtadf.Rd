@@ -31,9 +31,9 @@ Calculates recursive and non-recursive right-tailed unit root tests
 statistics.
 }
 \examples{
-T  <- 100
-y  <- rnorm(T)
-r0 <- round(T*(0.01+1.8/sqrt(T))) #minimal window size
+t  <- 100
+y  <- rnorm(t)
+r0 <- round(t*(0.01+1.8/sqrt(t))) # minimal window size
 rtadf(y, r0, test ="sadf")
 }
 \references{
