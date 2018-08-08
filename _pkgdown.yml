@@ -23,9 +23,11 @@ reference:
   desc: Function to estimate the ADF/SADF/GSADF test statstics
   contents:
   - '`rtadf`'
-- title: Critical values
-  desc: Functions for simulating critical values
+- title: Inference
+  desc: Functions for calculating critical and p values based on response surface aproximation or Monte Carlo simulations
   contents:
+  - '`rtadfCval`'
+  - '`rtadfPval`'
   - '`rtadfSim`'
   - '`rtadfSimPar`'
 - title: Data

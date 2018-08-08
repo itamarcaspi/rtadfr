@@ -64,7 +64,7 @@ statistics." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rtadfr</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.0.9000</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.0.9100</span>
       </span>
     </div>
 
@@ -165,9 +165,9 @@ Historical episodes of exuberance and collapse in the S&amp;P 500.
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>T</span>  <span class='kw'>&lt;-</span> <span class='fl'>100</span>
-<span class='no'>y</span>  <span class='kw'>&lt;-</span> <span class='fu'>rnorm</span>(<span class='no'>T</span>)
-<span class='no'>r0</span> <span class='kw'>&lt;-</span> <span class='fu'>round</span>(<span class='no'>T</span>*(<span class='fl'>0.01</span>+<span class='fl'>1.8</span>/<span class='fu'>sqrt</span>(<span class='no'>T</span>))) <span class='co'>#minimal window size</span>
+    <pre class="examples"><div class='input'><span class='no'>t</span>  <span class='kw'>&lt;-</span> <span class='fl'>100</span>
+<span class='no'>y</span>  <span class='kw'>&lt;-</span> <span class='fu'>rnorm</span>(<span class='no'>t</span>)
+<span class='no'>r0</span> <span class='kw'>&lt;-</span> <span class='fu'>round</span>(<span class='no'>t</span>*(<span class='fl'>0.01</span>+<span class='fl'>1.8</span>/<span class='fu'>sqrt</span>(<span class='no'>t</span>))) <span class='co'># minimal window size</span>
 <span class='fu'>rtadf</span>(<span class='no'>y</span>, <span class='no'>r0</span>, <span class='kw'>test</span> <span class='kw'>=</span><span class='st'>"sadf"</span>)</div><div class='output co'>#&gt; $testStat
 #&gt; [1] -2.845611
 #&gt; 
@@ -187,6 +187,12 @@ Historical episodes of exuberance and collapse in the S&amp;P 500.
 #&gt;  [85] -6.640657 -6.640392 -6.572922 -6.598442 -6.867047 -6.911572 -6.945343
 #&gt;  [92] -6.938110 -6.853645 -6.968786 -6.985652 -6.874317 -7.028427 -6.991871
 #&gt;  [99] -6.913288 -7.072469
+#&gt; 
+#&gt; $Cval
+#&gt;   significance.level critical.values
+#&gt; 1                90%       0.9828153
+#&gt; 2                95%       1.2957908
+#&gt; 3                99%       1.8902437
 #&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

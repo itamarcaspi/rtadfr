@@ -1,3 +1,7 @@
+# rtadfr 0.1.0.9100
+
+* Added surface fucntion approximations.
+
 # rtadfr 0.1.0.9000
 
 * Defined as a development version.
