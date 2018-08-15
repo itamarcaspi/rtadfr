@@ -1,9 +1,9 @@
 #' Returns p-values based on a response surface function approximation
 #'
 #' \code{rtadfPval} approximate p-values for the SADF test (Phillips,Wu and Yu,
-#' 2011) using the MacKinnon (1996) resoponce surface function approach.
+#' 2011) using the MacKinnon (1996) response surface function approach.
 #'
-#' @param t   Number of tervations (i.e., length of the sample)
+#' @param t   Number of observations (i.e., length of the sample)
 #' @param testStat  Test statistic
 #' @param testType  Test type, either "adf", "sadf" of "gsadf".
 #'

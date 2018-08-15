@@ -8,7 +8,7 @@
 #' @param nrep  Number of replications
 #' @param test  Test type, either "adf", "sadf" of "gsadf".
 #'
-#' @return List with 90, 95, 99 precent critical values and a threshold series
+#' @return List with 90, 95, 99 percent critical values and a threshold series
 #'   for the date-stamping procedure
 #'
 #' @references
@@ -29,7 +29,9 @@
 #' @importFrom stats embed
 #'
 #' @examples
+#' \dontrun{
 #' cv <- rtadfSimPar(t = 100, r0 = 10, nrep = 100, test = "sadf")
+#' }
 rtadfSimPar <- function(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf")) {
 
   # The parallel Monte Carlo simulation loop----------------------------------

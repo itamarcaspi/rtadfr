@@ -16,7 +16,7 @@ rtadfSimPar(t, r0, nrep = 1000, test = c("adf", "sadf", "gsadf"))
 \item{test}{Test type, either "adf", "sadf" of "gsadf".}
 }
 \value{
-List with 90, 95, 99 precent critical values and a threshold series
+List with 90, 95, 99 percent critical values and a threshold series
   for the date-stamping procedure
 }
 \description{
@@ -24,7 +24,9 @@ Simulates in parallel critical values and date-stamping sequences for the
 right-tailed ADF, SADF and GSADF tests.
 }
 \examples{
+\dontrun{
 cv <- rtadfSimPar(t = 100, r0 = 10, nrep = 100, test = "sadf")
+}
 }
 \references{
 Phillips, P. C. B., Wu, Y., & Yu, J. (2011). Explosive Behavior

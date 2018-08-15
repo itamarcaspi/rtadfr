@@ -31,10 +31,12 @@ Calculates recursive and non-recursive right-tailed unit root tests
 statistics.
 }
 \examples{
+\dontrun{
 t  <- 100
 y  <- rnorm(t)
 r0 <- round(t*(0.01+1.8/sqrt(t))) # minimal window size
 rtadf(y, r0, test ="sadf")
+}
 }
 \references{
 Phillips, P. C. B., Wu, Y., & Yu, J. (2011). Explosive Behavior

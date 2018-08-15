@@ -29,10 +29,12 @@
 #' @importFrom urca ur.df
 #'
 #' @examples
+#' \dontrun{
 #' t  <- 100
 #' y  <- rnorm(t)
 #' r0 <- round(t*(0.01+1.8/sqrt(t))) # minimal window size
 #' rtadf(y, r0, test ="sadf")
+#' }
 rtadf <- function(y, r0, test = c("adf", "sadf", "gsadf"),
                   type = c("none", "drift", "trend"),
                   lags = 1, selectlags = c("Fixed", "AIC", "BIC")) {

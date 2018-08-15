@@ -11,8 +11,9 @@ Description: rtadfr (right-tail augmented Dickey-Fuller with R), an R package th
               tests may serve as empirical evidence for an asset price bubble. The package implements three types
               of tests: standard ADF, supremum ADF (SADF; Phillips, Wu, and Yu 2011) 
               and generalized SADF (GSADF; Phillips, Shi, and Yu 2015). The package provides critical and p values
-              based on either super-fast surface fucntion approximations or on Monte Carlo simulations.
+              based on either super-fast surface function approximations or on Monte Carlo simulations.
 License: GPL-3
+Language: en-US
 URL: https://github.com/icaspi99/rtadfr
 BugReports: https://github.com/icaspi99/rtadfr/issues
 Depends: 

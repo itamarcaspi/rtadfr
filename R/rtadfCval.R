@@ -3,7 +3,7 @@
 #' Returns critical values the right-tailed ADF, SADF and GSADF tests, based on
 #' a surface function approximation
 #'
-#' @param t   Number of tervations (i.e., length of the sample)
+#' @param t   Number of observations (i.e., length of the sample)
 #' @param pval  Significance level (in percent)
 #' @param testType  Test type, either "adf", "sadf" of "gsadf".
 #'
