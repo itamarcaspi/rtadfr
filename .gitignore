@@ -2,5 +2,4 @@ packrat/lib*/
 .Rproj.user
 .Rhistory
 .gitignore
-docs/
 man/
