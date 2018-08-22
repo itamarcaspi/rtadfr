@@ -1,7 +1,8 @@
 #' Returns critical values based on a response surface function approximation
 #'
-#' Returns critical values the right-tailed ADF, SADF and GSADF tests, based on
-#' a surface function approximation
+#' \code{rtadfCval} approximate critical values for the SADF test (Phillips,Wu
+#' and Yu, 2011) using the MacKinnon (1996) response surface function approach
+#' (Caspi, 2018).
 #'
 #' @param t   Number of observations (i.e., length of the sample)
 #' @param pval  Significance level (in percent)
@@ -9,16 +10,20 @@
 #'
 #' @return Numeric, critical value at the user-specified significance level.
 #'
-#' @references Phillips, P. C. B., Wu, Y., & Yu, J. (2011). Explosive Behavior
-#' in the 1990s Nasdaq: When Did Exuberance Escalate Asset Values?,
-#' \emph{International Economic Review}, 201(1), 201--226.
+#' @references Caspi, I. (2018) Empirical Distribution Functions for
+#'   Right-Tailed Unit Root tests for Exuberance. Unpublished mimeo.
 #'
-#' Phillips, P. C. B., Shi, S., & Yu, J. (2015). Testing for multiple bubbles:
-#' Historical episodes of exuberance and collapse in the S&P 500.
-#' \emph{International Economic Review}, 56(4), 1034--1078.
+#'   MacKinnon, J. G. (1996). Numerical distribution functions for unit root and
+#'   cointegration tests. \emph{Journal of Applied Econometrics}, 11(6):601–618.
 #'
-#' MacKinnon, J. G. (1996). Numerical distribution functions for unit root and cointegration
-#' tests. \emph{Journal of Applied Econometrics}, 11(6):601–618.
+#'   Phillips, P. C. B., Wu, Y., & Yu, J. (2011). Explosive Behavior in the
+#'   1990s Nasdaq: When Did Exuberance Escalate Asset Values?,
+#'   \emph{International Economic Review}, 201(1), 201--226.
+#'
+#'   Phillips, P. C. B., Shi, S., & Yu, J. (2015). Testing for multiple bubbles:
+#'   Historical episodes of exuberance and collapse in the S&P 500.
+#'   \emph{International Economic Review}, 56(4), 1034--1078.
+#'
 #'
 #' @export
 #'

@@ -1,7 +1,8 @@
 #' Returns p-values based on a response surface function approximation
 #'
 #' \code{rtadfPval} approximate p-values for the SADF test (Phillips,Wu and Yu,
-#' 2011) using the MacKinnon (1996) response surface function approach.
+#' 2011) using the MacKinnon (1996) response surface function approach (Caspi,
+#' 2018)..
 #'
 #' @param t   Number of observations (i.e., length of the sample)
 #' @param testStat  Test statistic
@@ -9,16 +10,19 @@
 #'
 #' @return Numeric, p-value that corresponds to a user-specified test statistic.
 #'
-#' @references Phillips, P. C. B., Wu, Y., & Yu, J. (2011). Explosive Behavior
-#'   in the 1990s Nasdaq: When Did Exuberance Escalate Asset Values?,
+#' @references Caspi, I. (2018) Empirical Distribution Functions for
+#'   Right-Tailed Unit Root tests for Exuberance. Unpublished mimeo.
+#'
+#'   MacKinnon, J. G. (1996). Numerical distribution functions for unit root and
+#'   cointegration tests. \emph{Journal of Applied Econometrics}, 11(6):601–618.
+#'
+#'   Phillips, P. C. B., Wu, Y., & Yu, J. (2011). Explosive Behavior in the
+#'   1990s Nasdaq: When Did Exuberance Escalate Asset Values?,
 #'   \emph{International Economic Review}, 201(1), 201--226.
 #'
 #'   Phillips, P. C. B., Shi, S., & Yu, J. (2015). Testing for multiple bubbles:
 #'   Historical episodes of exuberance and collapse in the S&P 500.
 #'   \emph{International Economic Review}, 56(4), 1034--1078.
-#'
-#'   MacKinnon, J. G. (1996). Numerical distribution functions for unit root and cointegration
-#'   tests. \emph{Journal of Applied Econometrics}, 11(6):601–618.
 #'
 #' @export
 #'
