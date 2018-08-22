@@ -2,7 +2,7 @@
 #'
 #' \code{rtadfPval} approximate p-values for the SADF test (Phillips,Wu and Yu,
 #' 2011) using the MacKinnon (1996) response surface function approach (Caspi,
-#' 2018)..
+#' 2018).
 #'
 #' @param t   Number of observations (i.e., length of the sample)
 #' @param testStat  Test statistic
