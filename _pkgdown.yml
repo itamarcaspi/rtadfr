@@ -15,7 +15,7 @@ navbar:
       href: news/index.html
   right:
    - icon: fa-github
-     href: https://github.com/icaspi99/rtadfr/
+     href: https://github.com/itamarcaspi/rtadfr/
    - icon: fa-home
      href: http://www.itamarcaspi.net/
 

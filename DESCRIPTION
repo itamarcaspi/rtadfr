@@ -14,8 +14,8 @@ Description: rtadfr (right-tail augmented Dickey-Fuller with R), an R package th
               based on either super-fast surface function approximations or on Monte Carlo simulations.
 License: GPL-3
 Language: en-US
-URL: https://github.com/icaspi99/rtadfr
-BugReports: https://github.com/icaspi99/rtadfr/issues
+URL: https://github.com/itamarcaspi/rtadfr
+BugReports: https://github.com/itamarcaspi/rtadfr/issues
 Depends: 
     R (>= 2.10)
 Imports: 

@@ -1,7 +1,7 @@
 rtadfr <img src="man/figures/logo.png" align="right" width="15%" height="15%"/>
 ======================
 
-[![Travis-CI Build Status](https://travis-ci.org/icaspi99/rtadfr.svg?branch=master)](https://travis-ci.org/icaspi99/rtadfr)
+[![Travis-CI Build Status](https://travis-ci.org/itamarcaspi/rtadfr.svg?branch=master)](https://travis-ci.org/itamarcaspi/rtadfr)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 
 
@@ -10,11 +10,11 @@ The R package *rtadfr* (Right Tailed ADF Tests with R) facilitates the Phillips,
 ## Installation
 
 You can install the **development** version from
-[Github](https://github.com/icaspi99/rtadfr)
+[Github](https://github.com/itamarcaspi/rtadfr)
 
 ```s
 # install.packages("devtools")
-devtools::install_github("icaspi99/rtadfr")
+devtools::install_github("itamarcaspi/rtadfr")
 ```
 
 ## Usage
