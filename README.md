@@ -26,11 +26,11 @@ library(rtadfr)
 
 set.seed(1203)  # for replicability
 data(snp)  # load S&P 500 data
-T   <- nrow(snp)  # Sample size
-r0  <- round(T*(0.01 + 1.8 / sqrt(T)))  # Minimal window size
+obs <- nrow(snp)  # Sample size
+r0  <- round(obs*(0.01 + 1.8 / sqrt(obs)))  # Minimal window size
 
 test <- rtadf(snp[,1], r0, test = "sadf")  # estimate test statistic and date-stamping sequence
-cvs  <- rtadfSimPar(T, nrep = 1000, r0, test = "sadf")  # simulate critical values and date-stamping threshold
+cvs  <- rtadfSimPar(obs, nrep = 1000, r0, test = "sadf")  # simulate critical values and date-stamping threshold
 
 testDf <- list("test statistic" = test$testStat, "critical values" = cvs$testCVs)  # test results
 
