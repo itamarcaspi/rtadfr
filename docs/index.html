@@ -96,11 +96,11 @@
 
 set.seed(<span class="dv">1203</span>)  <span class="co"># for replicability</span>
 data(snp)  <span class="co"># load S&amp;P 500 data</span>
-T   &lt;- nrow(snp)  <span class="co"># Sample size</span>
-r0  &lt;- round(T*(<span class="dv">0</span>.01 + <span class="dv">1</span>.8 / sqrt(T)))  <span class="co"># Minimal window size</span>
+obs &lt;- nrow(snp)  <span class="co"># Sample size</span>
+r0  &lt;- round(obs*(<span class="dv">0</span>.01 + <span class="dv">1</span>.8 / sqrt(obs)))  <span class="co"># Minimal window size</span>
 
 test &lt;- rtadf(snp[,<span class="dv">1</span>], r0, test = <span class="st">"sadf"</span>)  <span class="co"># estimate test statistic and date-stamping sequence</span>
-cvs  &lt;- rtadfSimPar(T, nrep = <span class="dv">1000</span>, r0, test = <span class="st">"sadf"</span>)  <span class="co"># simulate critical values and date-stamping threshold</span>
+cvs  &lt;- rtadfSimPar(obs, nrep = <span class="dv">1000</span>, r0, test = <span class="st">"sadf"</span>)  <span class="co"># simulate critical values and date-stamping threshold</span>
 
 testDf &lt;- list(<span class="st">"test statistic"</span> = test$testStat, <span class="st">"critical values"</span> = cvs$testCVs)  <span class="co"># test results</span>
 
